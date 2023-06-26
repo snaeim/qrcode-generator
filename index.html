@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>QR Code Generator</title>
+    <meta name="description" content="a complete client-side QR code generator" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="css/pico.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="container text-center">
+        <hgroup>
+            <h1>QR Code Generator</h1>
+            <h2>a complete client-side QR code generator</h2>
+        </hgroup>
+    </header>
+    <main class="container">
+        <section>
+            <fieldset>
+                <p>Enter your text in the <label for="textbox">text box</label> below.
+                    <span id="file-input-feature">Additionally, you can
+                        <label for="fileInput"><strong>choose a file</strong></label>
+                        <span id="dragndrop-feature">or drag and drop it</span>
+                        to load content into the editor.</span>
+                </p>
+                <input type="file" id="fileInput" hidden>
+                <textarea id="textbox" rows="8" spellcheck="false" wrap="off" autofocus></textarea>
+                <button id="generate" data-target="qrcode-modal">Generate!</button>
+            </fieldset>
+        </section>
+        <dialog id="qrcode-modal">
+            <article>
+                <a id="close" aria-label="Close" class="close" data-target="qrcode-modal"></a>
+                <img id="qrcode" height="512" width="512" src="" alt="">
+            </article>
+        </dialog>
+    </main>
+    <footer class="container text-center">
+        <small>Source code is available at
+            <a target="_blank" href="https://github.com/snaeim/qrcode-generator">Github</a></small>
+    </footer>
+    <script src="js/modal.js"></script>
+    <script src="js/qrious.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

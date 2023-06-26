@@ -1,0 +1,31 @@
+.text-center {
+    text-align: center;
+}
+
+.container {
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+#textbox {
+    resize: vertical;
+}
+
+label {
+    display: inline;
+}
+
+label[for=fileInput]:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    cursor: pointer;
+}
+
+#file-input-feature,
+#dragndrop-feature {
+    display: none;
+}
+
+#close {
+    cursor: pointer;
+}
